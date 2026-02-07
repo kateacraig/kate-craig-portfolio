@@ -9,6 +9,7 @@
   --dark-gray: #121412;
   --light-gray: #bcbcbc;
   --light-blue: #244965;
+  --purple: purple;
   --text-light: #666666;
   --background: #f8f9fa;
 
@@ -41,6 +42,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.light-blue {
+  color: var(--light-blue);
+}
+
+.text-center {
+  text-align: center;
 }
 
 body {
@@ -250,7 +259,10 @@ nav {
 
 .hero-text h1 {
   font-size: 6rem;
+  color: var(--white);
   margin-bottom: 0.5rem;
+  text-shadow: -3px -3px 0 var(--light-blue), 3px -3px 0 var(--light-blue),
+    -3px 3px 0 var(--light-blue), 3px 3px 0 var(--light-blue);
 }
 
 .hero-text h2 {
