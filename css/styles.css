@@ -485,10 +485,6 @@ nav {
     font-size: 2.5rem;
   }
 
-  .hero .tagline {
-    font-size: 1.2rem;
-  }
-
   section {
     padding: 80px 0;
   }
@@ -532,12 +528,12 @@ nav {
     font-size: 2rem;
   }
 
-  .hero .tagline {
-    font-size: 1rem;
+  .hero-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero .cta-text {
-    font-size: 1rem;
+  .hero-image img {
+    width: 150px;
   }
 
   .btn {

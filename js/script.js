@@ -201,13 +201,14 @@ document.addEventListener("DOMContentLoaded", function () {
       projectsCarouselSlides.style.transform = `translateX(${offset}%)`;
     }
 
-    // Move by 1.5 slides
+    // Move by 1.5 slides on desktop, 1 slide on mobile
     function projectsNextSlide() {
       if (projectsIsTransitioning || projectsIsPaused) return;
 
       projectsIsTransitioning = true;
-      // Move by 1.5 slides instead of 1
-      projectsCurrentIndex += 1.5;
+      // Move by 1.5 slides on desktop, 1 slide on mobile
+      const slideIncrement = window.innerWidth <= 460 ? 1 : 1.5;
+      projectsCurrentIndex += slideIncrement;
       updateProjectsCarouselPosition(true);
 
       setTimeout(() => {
@@ -227,8 +228,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (projectsIsTransitioning || projectsIsPaused) return;
 
       projectsIsTransitioning = true;
-      // Move by 1.5 slides instead of 1
-      projectsCurrentIndex -= 1.5;
+      // Move by 1.5 slides on desktop, 1 slide on mobile
+      const slideIncrement = window.innerWidth <= 460 ? 1 : 1.5;
+      projectsCurrentIndex -= slideIncrement;
       updateProjectsCarouselPosition(true);
 
       setTimeout(() => {
