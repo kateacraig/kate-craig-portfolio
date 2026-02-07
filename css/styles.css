@@ -52,16 +52,15 @@
   text-align: center;
 }
 
-.border {
-  border: 2px solid var(--white);
-  margin: 0 50px;
-}
-
 body {
   font-family: var(--font-body);
   color: var(--white);
   line-height: 1.6;
   background-color: var(--black);
+}
+
+section {
+  padding: 150px 0;
 }
 
 img {
@@ -106,6 +105,11 @@ h3 {
 
 p {
   margin-bottom: 1rem;
+}
+
+.border {
+  border: var(--border);
+  margin: 0 50px;
 }
 
 /* Container */
@@ -273,17 +277,9 @@ nav {
   text-align: left;
 }
 
-.about {
-  padding: 100px 0 150px 0;
-}
-
-.tech {
-  padding: 100px 0 150px 0;
-}
-
-.projects {
-  padding: 100px 0 150px 0;
-}
+/* ==========================================
+   CAROUSEL BASE STYLES (Both Carousels)
+   ========================================== */
 
 /* Carousel Container */
 .carousel {
@@ -292,6 +288,7 @@ nav {
   position: relative;
   border: 5px solid white;
   box-sizing: border-box;
+  margin-top: 2rem;
 }
 
 /* Carousel Slides Wrapper */
@@ -303,7 +300,7 @@ nav {
 
 /* Individual Slide */
 .carousel-slide {
-  flex: 0 0 25%;
+  flex: 0 0 25%; /* 4 images visible on desktop (100% / 4 = 25%) */
   min-width: 25%;
   box-sizing: border-box;
   border: none;
@@ -317,7 +314,7 @@ nav {
 
 .carousel-placeholder-icon {
   width: 100%;
-  aspect-ratio: 17 / 12;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -326,6 +323,7 @@ nav {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .carousel-placeholder-text {
@@ -340,8 +338,35 @@ nav {
   font-size: 14px;
 }
 
-/* Navigation Arrows */
-.carousel-arrow {
+/* ==========================================
+   ABOUT CAROUSEL - No Arrows, No Text Overlay
+   ========================================== */
+.about-carousel {
+  /* Uses base carousel styles */
+}
+
+/* About carousel: 5:3 aspect ratio */
+.about-carousel .carousel-placeholder-icon {
+  aspect-ratio: 5 / 4;
+}
+
+/* Hide text overlay for about carousel */
+.about-carousel .carousel-placeholder-text {
+  display: none;
+}
+
+/* ==========================================
+   PROJECTS CAROUSEL - With Arrows & Hover Effects
+   ========================================== */
+
+/* Projects Carousel: Image scales on hover */
+.projects-carousel .carousel-placeholder-icon img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Navigation Arrows (ONLY for projects carousel) */
+.projects-carousel .carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -360,15 +385,15 @@ nav {
   transition: background 0.3s ease;
 }
 
-.carousel-arrow:hover {
+.projects-carousel .carousel-arrow:hover {
   background: rgba(255, 255, 255, 1);
 }
 
-.carousel-arrow.prev {
+.projects-carousel .carousel-arrow.prev {
   left: 15px;
 }
 
-.carousel-arrow.next {
+.projects-carousel .carousel-arrow.next {
   right: 15px;
 }
 
@@ -391,8 +416,7 @@ nav {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .container {
-    max-height: 100%;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
 }
 
@@ -434,7 +458,7 @@ nav {
   .nav-menu {
     display: none;
     flex-direction: column;
-    width: 1=200%;
+    width: 100%;
     gap: 0;
     color: white;
     background-color: var(--dark-blue);
@@ -461,15 +485,16 @@ nav {
     font-size: 2.5rem;
   }
 
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .hero .tagline {
+    font-size: 1.2rem;
   }
 
-  .hero-image {
-    max-width: 130px;
-    height: auto;
+  section {
+    padding: 80px 0;
+  }
+
+  .border {
+    margin: 0 20px;
   }
 
   /* Carousel adjustments */
@@ -478,17 +503,17 @@ nav {
     min-width: 25%;
   }
 
-  .carousel-arrow {
+  .projects-carousel .carousel-arrow {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
 
-  .carousel-arrow.prev {
+  .projects-carousel .carousel-arrow.prev {
     left: 10px;
   }
 
-  .carousel-arrow.next {
+  .projects-carousel .carousel-arrow.next {
     right: 10px;
   }
 }
@@ -496,8 +521,7 @@ nav {
 @media (max-width: 460px) {
   /* Mobile adjustments */
   .container {
-    max-width: 100%;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .hero {
@@ -533,22 +557,30 @@ nav {
     font-size: 1.5rem;
   }
 
+  section {
+    padding: 60px 0;
+  }
+
+  .border {
+    margin: 0 10px;
+  }
+
   .carousel-slide {
     flex: 0 0 100%;
     min-width: 100%;
   }
 
-  .carousel-arrow {
+  .projects-carousel .carousel-arrow {
     width: 35px;
     height: 35px;
     font-size: 18px;
   }
 
-  .carousel-arrow.prev {
+  .projects-carousel .carousel-arrow.prev {
     left: 5px;
   }
 
-  .carousel-arrow.next {
+  .projects-carousel .carousel-arrow.next {
     right: 5px;
   }
 }
