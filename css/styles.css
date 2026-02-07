@@ -287,10 +287,10 @@ nav {
 
 /* Individual Slide */
 .carousel-slide {
-  flex: 0 0 25%; /* 4 images visible on desktop (100% / 4 = 25%) */
+  flex: 0 0 25%;
   min-width: 25%;
   box-sizing: border-box;
-  border: none; /* No border between images */
+  border: none;
 }
 
 /* Placeholder Styling */
@@ -301,7 +301,7 @@ nav {
 
 .carousel-placeholder-icon {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Makes it square - adjust if needed */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -375,7 +375,8 @@ nav {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .container {
-    padding: 0 1.5rem;
+    max-height: 100%;
+    padding: 0 2rem;
   }
 }
 
@@ -444,9 +445,17 @@ nav {
     font-size: 2.5rem;
   }
 
-  .hero .tagline {
-    font-size: 1.2rem;
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+
+  .hero-image {
+    max-width: 130px;
+    height: auto;
+  }
+
   /* Carousel adjustments */
   .carousel-slide {
     flex: 0 0 25%;
@@ -471,7 +480,8 @@ nav {
 @media (max-width: 460px) {
   /* Mobile adjustments */
   .container {
-    padding: 0 1rem;
+    max-width: 100%;
+    padding: 0 2rem;
   }
 
   .hero {
