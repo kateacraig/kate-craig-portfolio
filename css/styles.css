@@ -52,6 +52,11 @@
   text-align: center;
 }
 
+.border {
+  border: 2px solid var(--white);
+  margin: 0 50px;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--white);
@@ -62,7 +67,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: var(--radius-sm);
   box-shadow: var(--image-shadow);
 }
 
@@ -269,6 +273,18 @@ nav {
   text-align: left;
 }
 
+.about {
+  padding: 100px 0 150px 0;
+}
+
+.tech {
+  padding: 100px 0 150px 0;
+}
+
+.projects {
+  padding: 100px 0 150px 0;
+}
+
 /* Carousel Container */
 .carousel {
   width: 100%;
@@ -301,7 +317,7 @@ nav {
 
 .carousel-placeholder-icon {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 17 / 12;
   overflow: hidden;
 }
 
