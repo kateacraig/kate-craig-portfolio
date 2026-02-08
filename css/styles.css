@@ -275,7 +275,7 @@ nav {
 }
 
 /* ==========================================
-   CAROUSEL BASE STYLES (Both Carousels)
+   About Section
    ========================================== */
 
 .about-content p {
@@ -414,9 +414,23 @@ nav {
 }
 
 /* ==========================================
-   Footer
+   Project Section
+   ========================================== */
+
+.projects-header h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   Footer Section
    ========================================== */
 /* Footer Styles */
+footer {
+  padding: 50px 0;
+}
+
 .footer-content h4 {
   font-size: 1.5rem;
 }
@@ -426,16 +440,37 @@ nav {
   margin: 0;
 }
 
-.footer-social {
-  margin-top: 1rem;
+.footer-updated a {
+  text-decoration: underline;
 }
 
 /* Footer Grid */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
   padding: 2rem 0;
+}
+
+/* Social Icons */
+.footer-social {
+  margin-top: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  font-size: 1.6rem;
 }
 
 /* Animations */
@@ -461,7 +496,7 @@ nav {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1025px) {
   header {
     background: linear-gradient(
       to right,
@@ -527,7 +562,7 @@ nav {
   }
 
   section {
-    padding: 80px 0;
+    padding: 80px 50px;
   }
 
   .border {
@@ -553,6 +588,21 @@ nav {
   .projects-carousel .carousel-arrow.next {
     right: 10px;
   }
+
+  .projects-header h4 {
+    font-size: 1.35rem;
+  }
+
+  .projects-header p {
+    font-size: 1rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem 50px;
+  }
 }
 
 @media (max-width: 460px) {
@@ -562,14 +612,15 @@ nav {
   }
 
   .hero {
-    padding: 4rem 0;
+    padding: 50px 10px;
   }
 
   .hero h1 {
     font-size: 2rem;
   }
 
-  .hero-grid {
+  .hero-grid,
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -627,5 +678,14 @@ nav {
 
   .projects-carousel .carousel-arrow.next {
     right: 5px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
   }
 }
