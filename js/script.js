@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth <= 460) {
         return 1;
       } else {
-        return 4;
+        return 5;
       }
     }
 
@@ -201,14 +201,13 @@ document.addEventListener("DOMContentLoaded", function () {
       projectsCarouselSlides.style.transform = `translateX(${offset}%)`;
     }
 
-    // Move by 1.5 slides on desktop, 1 slide on mobile
+    // Move by 1 slide on both desktop and mobile
     function projectsNextSlide() {
       if (projectsIsTransitioning || projectsIsPaused) return;
 
       projectsIsTransitioning = true;
-      // Move by 1.5 slides on desktop, 1 slide on mobile
-      const slideIncrement = window.innerWidth <= 460 ? 1 : 1.5;
-      projectsCurrentIndex += slideIncrement;
+      // Move by 1 slide
+      projectsCurrentIndex += 1;
       updateProjectsCarouselPosition(true);
 
       setTimeout(() => {
@@ -228,9 +227,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (projectsIsTransitioning || projectsIsPaused) return;
 
       projectsIsTransitioning = true;
-      // Move by 1.5 slides on desktop, 1 slide on mobile
-      const slideIncrement = window.innerWidth <= 460 ? 1 : 1.5;
-      projectsCurrentIndex -= slideIncrement;
+      // Move by 1 slide
+      projectsCurrentIndex -= 1;
       updateProjectsCarouselPosition(true);
 
       setTimeout(() => {

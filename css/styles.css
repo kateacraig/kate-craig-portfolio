@@ -9,9 +9,6 @@
   --dark-gray: #121412;
   --light-gray: #bcbcbc;
   --light-blue: #244965;
-  --purple: purple;
-  --text-light: #666666;
-  --background: #f8f9fa;
 
   /* Typography */
   --font-heading: "Playfair Display", serif;
@@ -281,6 +278,14 @@ nav {
    CAROUSEL BASE STYLES (Both Carousels)
    ========================================== */
 
+.about-content p {
+  line-height: 1.5;
+}
+
+/* ==========================================
+   CAROUSEL BASE STYLES (Both Carousels)
+   ========================================== */
+
 /* Carousel Container */
 .carousel {
   width: 100%;
@@ -289,6 +294,10 @@ nav {
   border: 5px solid white;
   box-sizing: border-box;
   margin-top: 2rem;
+}
+
+.about-carousel {
+  margin-top: 80px;
 }
 
 /* Carousel Slides Wrapper */
@@ -300,7 +309,7 @@ nav {
 
 /* Individual Slide */
 .carousel-slide {
-  flex: 0 0 25%; /* 4 images visible on desktop (100% / 4 = 25%) */
+  flex: 0 0 25%;
   min-width: 25%;
   box-sizing: border-box;
   border: none;
@@ -343,6 +352,13 @@ nav {
    ========================================== */
 .about-carousel {
   /* Uses base carousel styles */
+}
+
+.carousel-about-slide {
+  flex: 0 0 20%;
+  min-width: 20%;
+  box-sizing: border-box;
+  border: none;
 }
 
 /* About carousel: 5:3 aspect ratio */
@@ -395,6 +411,31 @@ nav {
 
 .projects-carousel .carousel-arrow.next {
   right: 15px;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+/* Footer Styles */
+.footer-content h4 {
+  font-size: 1.5rem;
+}
+
+.footer-content p {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social {
+  margin-top: 1rem;
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 /* Animations */
@@ -461,7 +502,7 @@ nav {
     width: 100%;
     gap: 0;
     color: white;
-    background-color: var(--dark-blue);
+    background-color: var(--black);
     padding: 1rem 0;
   }
 
@@ -553,6 +594,10 @@ nav {
     font-size: 1.5rem;
   }
 
+  p {
+    font-size: 1.1rem;
+  }
+
   section {
     padding: 60px 0;
   }
@@ -564,6 +609,10 @@ nav {
   .carousel-slide {
     flex: 0 0 100%;
     min-width: 100%;
+  }
+
+  .about-carousel .carousel-placeholder-icon {
+    aspect-ratio: 3 / 2;
   }
 
   .projects-carousel .carousel-arrow {
