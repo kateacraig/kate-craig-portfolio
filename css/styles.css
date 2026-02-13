@@ -438,6 +438,12 @@ nav {
   z-index: 1;
 }
 
+.logos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
 .tech-logos {
   margin-left: 75px;
 }
@@ -715,6 +721,25 @@ footer {
 
   .projects-carousel .carousel-arrow.next {
     right: 5px;
+  }
+
+  .tech-logos {
+    margin-left: 0px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tech-logos img {
+    margin: 0 auto;
+  }
+
+  .logos-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
   }
 
   footer {
