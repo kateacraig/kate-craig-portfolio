@@ -302,3 +302,28 @@ document.addEventListener("DOMContentLoaded", function () {
     projectsAutoAdvanceInterval = setInterval(projectsNextSlide, 5000);
   }
 });
+
+// ==========================================
+// Animation
+//==========================================
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target); // Stop observing after animation triggers (plays only once)
+      }
+    });
+  },
+  {
+    threshold: 0.2, // Triggers when 20% of element is visible
+    rootMargin: "0px", // Adjust if you want earlier/later trigger
+  }
+);
+
+// Observe all items in your grid section
+document.querySelectorAll(".fade-in-item").forEach((item, index) => {
+  // Add staggered delay based on index
+  item.style.animationDelay = `${index * 0.2}s`;
+  observer.observe(item);
+});

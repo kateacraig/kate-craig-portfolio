@@ -57,6 +57,10 @@ body {
 }
 
 section {
+  padding: 100px 0;
+}
+
+section.hero {
   padding: 150px 0;
 }
 
@@ -163,13 +167,13 @@ nav {
   font-weight: 500;
   padding: 0.5rem 1rem;
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .nav-menu > li > a:hover {
   color: var(--dark-gray);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-shadow: -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
     -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
 }
@@ -386,7 +390,7 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(36, 35, 35, 0.9);
   border: none;
   width: 50px;
   height: 50px;
@@ -397,7 +401,7 @@ nav {
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: #333;
+  color: #ffffff;
   transition: background 0.3s ease;
 }
 
@@ -421,6 +425,31 @@ nav {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.tech-logos {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-logos {
+  margin-left: 75px;
+}
+
+.tech-logos img {
+  width: 100px;
+  height: auto;
+  padding: 10px;
+  margin: 0 15px;
+  border-radius: 15px;
+  border: 0.5px solid var(--white);
+  box-shadow: 2px 3px 3px var(--white);
 }
 
 /* ==========================================
@@ -477,7 +506,7 @@ footer {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -485,8 +514,16 @@ footer {
   }
 }
 
-.fade-in {
-  animation: fadeInUp 0.8s ease-out;
+/* Initial hidden state */
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Visible state - animation triggers */
+.fade-in-item.is-visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+  /* animation-delay is set via JavaScript */
 }
 
 /* Responsive Design */
