@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setupAboutInfiniteLoop();
 
     // Start auto-advance (NO arrows for about carousel)
-    aboutAutoAdvanceInterval = setInterval(aboutNextSlide, 5000);
+    aboutAutoAdvanceInterval = setInterval(aboutNextSlide, 1000);
   }
 
   // ==========================================
