@@ -60,6 +60,10 @@ section {
   padding: 100px 0;
 }
 
+section {
+  padding: 100px 0;
+}
+
 section.hero {
   padding: 150px 0;
 }
@@ -111,6 +115,88 @@ p {
 .border {
   border: var(--border);
   margin: 0 50px;
+}
+
+.blue-border {
+  border: 5px solid var(--light-blue);
+  margin: 50px;
+  padding: 20px;
+}
+
+.blue-project-border {
+  border: 5px solid var(--light-blue);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--white);
+  color: var(--light-blue);
+  padding: 0.8rem 1.3rem;
+  width: 300px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--light-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  background-color: var(--light-blue);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-footer {
+  background-color: var(--white);
+  color: var(--light-blue);
+  padding: 1rem 2rem;
+  width: 330px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--light-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-top: 2.5rem;
+  text-decoration: none;
+}
+
+.btn-footer:hover {
+  background-color: var(--light-blue);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-project {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 0.8rem 1.3rem;
+  width: 300px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-project:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--light-blue);
+  color: var(--light-blue);
 }
 
 /* Container */
@@ -207,28 +293,6 @@ nav {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Buttons */
-.btn {
-  background-color: var(--dark-blue);
-  color: var(--white);
-  padding: 1rem 2rem;
-  border-radius: var(--radius-md);
-  border: 1px solid transparent;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-block;
-  text-align: center;
-  font-family: var(--font-body);
-  font-size: 1rem;
-}
-
-.btn:hover {
-  background-color: var(--white);
-  border: 1px solid var(--dark-blue);
-  color: var(--dark-blue);
-}
-
 /* Home Hero Section */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
@@ -244,7 +308,7 @@ nav {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .hero-image {
@@ -253,7 +317,7 @@ nav {
 }
 
 .hero-image img {
-  width: 200px;
+  width: 270px;
   height: auto;
   border-radius: 50%;
   border: var(--border);
@@ -301,7 +365,7 @@ nav {
 }
 
 .about-carousel {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 /* Carousel Slides Wrapper */
@@ -459,6 +523,85 @@ nav {
 }
 
 /* ==========================================
+   Project Pages
+   ========================================== */
+
+/* Project Page Header */
+.project-hero {
+  padding: 10px 50px;
+}
+
+section.project-hero {
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url(../images/hero-background-image.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+}
+
+.project-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.project-header p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Project Page Description */
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+.project-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.project-logos {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  margin-bottom: 0;
+}
+
+.project-logos img {
+  width: 80px;
+  height: auto;
+  padding: 10px;
+  margin: 0 15px;
+  border-radius: 15px;
+  border: 0.5px solid var(--white);
+  box-shadow: 2px 3px 3px var(--white);
+  margin-top: 2rem;
+}
+
+.project-button p {
+  text-align: center;
+}
+
+/* Dictionary Project Image Grid */
+.dictionary-project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+/* ==========================================
    Footer Section
    ========================================== */
 /* Footer Styles */
@@ -508,6 +651,10 @@ footer {
   font-size: 1.6rem;
 }
 
+.resume-download a {
+  text-decoration: none;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -540,6 +687,10 @@ footer {
 }
 
 @media (max-width: 1025px) {
+  .container {
+    padding: 0 2rem;
+  }
+
   header {
     background: linear-gradient(
       to right,
@@ -600,6 +751,11 @@ footer {
   }
 
   /* Hero adjustments */
+  .hero-grid {
+    grid-template-columns: 1fr 2.3fr;
+    gap: 2rem;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -608,8 +764,12 @@ footer {
     padding: 80px 50px;
   }
 
+  section.hero {
+    padding: 80px 50px;
+  }
+
   .border {
-    margin: 0 20px;
+    margin: 0 40px;
   }
 
   /* Carousel adjustments */
@@ -646,12 +806,27 @@ footer {
     gap: 2rem;
     padding: 2rem 50px;
   }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    width: 270px;
+  }
+
+  .btn-footer {
+    padding: 1rem 1rem;
+    width: 270px;
+    margin-top: 2.5rem;
+  }
 }
 
 @media (max-width: 460px) {
   /* Mobile adjustments */
   .container {
-    padding: 0 1rem;
+    padding: 0 2rem;
+  }
+
+  .border {
+    margin: 0 20px;
   }
 
   .hero {
@@ -693,11 +868,15 @@ footer {
   }
 
   section {
-    padding: 60px 0;
+    padding: 60px 10px;
+  }
+
+  section.hero {
+    padding: 60px 10px;
   }
 
   .border {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 
   .carousel-slide {
@@ -750,5 +929,10 @@ footer {
   .social-icons {
     display: flex;
     justify-content: center;
+  }
+
+  .btn {
+    padding: 0.8rem 1rem;
+    width: 230px;
   }
 }
