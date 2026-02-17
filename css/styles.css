@@ -431,7 +431,7 @@ nav {
 
 /* About carousel: 5:4 aspect ratio */
 .about-carousel .carousel-placeholder-icon {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 12 / 9;
 }
 
 /* Hide text overlay for about carousel */
