@@ -391,7 +391,7 @@ nav {
 
 .carousel-placeholder-icon {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 4;
   overflow: hidden;
 }
 
@@ -429,9 +429,9 @@ nav {
   border: none;
 }
 
-/* About carousel: 5:3 aspect ratio */
+/* About carousel: 5:4 aspect ratio */
 .about-carousel .carousel-placeholder-icon {
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 16 / 9;
 }
 
 /* Hide text overlay for about carousel */
@@ -467,10 +467,6 @@ nav {
   font-size: 24px;
   color: #ffffff;
   transition: background 0.3s ease;
-}
-
-.projects-carousel .carousel-arrow:hover {
-  background: rgba(255, 255, 255, 1);
 }
 
 .projects-carousel .carousel-arrow.prev {
