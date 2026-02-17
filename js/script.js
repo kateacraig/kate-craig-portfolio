@@ -278,13 +278,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Arrow click handlers
     prevArrow.addEventListener("click", function () {
+      projectsIsPaused = false; // Temporarily unpause
       projectsPrevSlide();
       resetProjectsAutoAdvance();
+      projectsIsPaused = true; // Re-pause since we're still hovering
     });
 
     nextArrow.addEventListener("click", function () {
+      projectsIsPaused = false; // Temporarily unpause
       projectsNextSlide();
       resetProjectsAutoAdvance();
+      projectsIsPaused = true; // Re-pause since we're still hovering
     });
 
     // Pause on hover - for the entire carousel
