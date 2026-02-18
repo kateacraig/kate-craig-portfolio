@@ -119,7 +119,6 @@ p {
 
 .blue-border {
   border: 5px solid var(--light-blue);
-  margin: 50px;
   padding: 20px;
 }
 
@@ -429,7 +428,7 @@ nav {
   border: none;
 }
 
-/* About carousel: 5:4 aspect ratio */
+/* About carousel: 12:9 aspect ratio */
 .about-carousel .carousel-placeholder-icon {
   aspect-ratio: 12 / 9;
 }
@@ -595,6 +594,41 @@ section.project-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+}
+
+/* ==========================================
+   Testimonials Pages
+   ========================================== */
+
+/* Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.testimonial-padding {
+  padding: 50px;
+}
+
+.testimonials-grid-item h2 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.testimonials-grid-item h3 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 0;
+  text-shadow: -0.05px -0.05px 0 var(--light-blue),
+    0.05px -0.05px 0 var(--light-blue), -0.05px 0.05px 0 var(--light-blue),
+    0.05px 0.05px 0 var(--light-blue);
+}
+
+.testimonials-grid-item h4 {
+  color: var(--light-blue);
+  margin-top: 0.5rem;
 }
 
 /* ==========================================
