@@ -858,6 +858,10 @@ footer {
     width: 270px;
     margin-top: 2.5rem;
   }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 460px) {
@@ -985,5 +989,9 @@ footer {
   .btn {
     padding: 0.8rem 1rem;
     width: 230px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
