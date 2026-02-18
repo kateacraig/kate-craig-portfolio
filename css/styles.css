@@ -596,6 +596,13 @@ section.project-hero {
   grid-gap: 2rem;
 }
 
+.cranberries-project-screenshot {
+  display: block;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* ==========================================
    Testimonials Pages
    ========================================== */
