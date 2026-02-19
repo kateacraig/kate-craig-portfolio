@@ -1002,4 +1002,8 @@ footer {
   .testimonial-padding {
     padding: 20px;
   }
+
+  .testimonials-grid-item {
+    text-align: center;
+  }
 }
