@@ -868,7 +868,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .btn-footer {
     width: 250px;
   }
