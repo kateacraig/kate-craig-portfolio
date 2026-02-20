@@ -868,6 +868,12 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .btn-footer {
+    width: 250px;
+  }
+}
+
 @media (max-width: 460px) {
   /* Mobile adjustments */
   .container {
