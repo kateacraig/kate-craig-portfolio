@@ -868,7 +868,7 @@ footer {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 932px) {
   .container {
     padding: 0 2rem;
   }
