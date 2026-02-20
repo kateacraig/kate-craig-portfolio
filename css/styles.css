@@ -874,7 +874,9 @@ footer {
   }
 
   .btn-footer {
-    width: 220px;
+    padding: 0.5rem 0.5rem;
+    width: 230px;
+    margin-top: 2.5rem;
   }
 }
 
