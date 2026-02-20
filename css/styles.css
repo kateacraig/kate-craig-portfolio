@@ -869,6 +869,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .container {
+    padding: 0 2rem;
+  }
+
   .btn-footer {
     width: 250px;
   }
