@@ -294,7 +294,7 @@ nav {
 
 /* Home Hero Section */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
     url(../images/hero-background-image.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
