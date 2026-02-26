@@ -837,8 +837,8 @@ footer {
 
   /* Hero adjustments */
   .hero-grid {
-    grid-template-columns: 1fr 2fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 2rem;
   }
 
   .hero h1 {
