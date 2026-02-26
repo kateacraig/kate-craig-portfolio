@@ -683,12 +683,16 @@ section.project-hero {
 
 /* Project Page Header */
 
-.resume iframe {
-  width: 1130px;
-  height: 1100px;
+.resume-container {
+  max-width: 1130px;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+.resume iframe {
+  width: 100%;
+  height: 1100px;
 }
 
 /* ==========================================
@@ -916,9 +920,12 @@ footer {
     padding: 30px;
   }
 
+  .resume-container {
+    max-width: 780px;
+  }
+
   .resume iframe {
-    width: 780px;
-    height: 900px;
+    width: 100%;
   }
 }
 
@@ -933,9 +940,13 @@ footer {
     margin-top: 2.5rem;
   }
 
+  .resume-container {
+    max-width: 670px;
+  }
+
   .resume iframe {
-    width: 670px;
-    height: 800px;
+    width: 100%;
+    height: 700px;
   }
 }
 
@@ -1085,9 +1096,13 @@ footer {
     text-align: center;
   }
 
-  .resume iframe {
-    width: 300px;
-    height: 500px;
+  .resume-container {
+    max-width: 300px;
     margin-top: 0;
+  }
+
+  .resume iframe {
+    width: 100%;
+    height: 500px;
   }
 }
