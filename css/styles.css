@@ -682,20 +682,8 @@ section.project-hero {
 
 /* Project Page Header */
 
-.resume-desktop {
-  max-width: 1150px;
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.resume-desktop iframe {
-  width: 100%;
-  height: 1100px;
-}
-
 .resume-mobile {
-  display: none;
+  display: block;
 }
 
 /* ==========================================
