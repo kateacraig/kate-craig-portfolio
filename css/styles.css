@@ -846,7 +846,8 @@ footer {
   }
 
   .hero-image img {
-    width: 320px;
+    height: 300px;
+    width: auto;
   }
 
   section {
