@@ -355,6 +355,14 @@ nav {
   color: orange;
 }
 
+.kcc-link a {
+  text-decoration: underline;
+}
+
+.kcc-link a:hover {
+  color: orange;
+}
+
 /* ==========================================
    About Section
    ========================================== */
@@ -667,6 +675,20 @@ section.project-hero {
   margin-top: 0.5rem;
   font-size: 1.3rem;
   font-weight: 600;
+}
+
+/* ==========================================
+   Resume Pages
+   ========================================== */
+
+/* Project Page Header */
+
+.resume iframe {
+  width: 1130px;
+  height: 1100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 /* ==========================================
